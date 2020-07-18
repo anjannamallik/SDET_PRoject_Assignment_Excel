@@ -10,11 +10,12 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
 
+import common.Wrapper;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
-public class Login_Stepdefinitions {
+public class Login_Stepdefinitions extends Wrapper{
 
 static WebDriver driver;
 String url = "http://elearningm1.upskills.in/";
@@ -26,6 +27,8 @@ public void i_launch_the_application() throws Throwable {
 	driver = new ChromeDriver();
 	driver.get(url);
 	Thread.sleep(3000);
+	driver.manage().window().maximize();
+	Thread.sleep(3000);
 }
 
 @Then("^I enter the username \"([^\"]*)\" and password \"([^\"]*)\"$")
@@ -35,8 +38,8 @@ public void i_enter_the_username_and_password(String username, String password) 
 	driver.findElement(By.cssSelector("input[placeholder=Username]")).sendKeys(username);
 	driver.findElement(By.cssSelector("input[placeholder=Pass]")).sendKeys(password);
 	driver.findElement(By.name("submitAuth")).click();
-	driver.manage().window().maximize();
-	Thread.sleep(3000);
+	
+	
 }
 
 @Given("^I clicked on Adminstration tab$")
@@ -59,18 +62,18 @@ public void i_clicked_on_Add_Category_icon() throws Throwable {
 	Thread.sleep(3000);
 }
 
-@When("^I enter the Category Code \"([^\"]*)\"$")
-public void i_enter_the_Category_Code(String code) throws Throwable {
+@When("^I enter the Category Code$")
+public void i_enter_the_Category_Code() throws Throwable {
     // Write code here that turns the phrase above into concrete actions //input[@type='text' and @name='code'] 
 	driver.findElement(By.xpath("//input[@type='text' and @name='code']")).clear();
-	driver.findElement(By.xpath("//input[@type='text' and @name='code']")).sendKeys(code);
+	driver.findElement(By.xpath("//input[@type='text' and @name='code']")).sendKeys(Wrapper.getDataFromExcel(1,0));
 }
 
-@When("^I enter the Category Name \"([^\"]*)\"$")
-public void i_enter_the_Category_Name(String cat_name) throws Throwable {
+@When("^I enter the Category Name$")
+public void i_enter_the_Category_Name() throws Throwable {
     // Write code here that turns the phrase above into concrete actions  //input[@type='text' and @name='name']
 	driver.findElement(By.xpath("//input[@type='text' and @name='name']")).clear();
-	driver.findElement(By.xpath("//input[@type='text' and @name='name']")).sendKeys(cat_name);
+	driver.findElement(By.xpath("//input[@type='text' and @name='name']")).sendKeys(Wrapper.getDataFromExcel(1,1));
 }
 
 @When("^I clicked Yes radio button$")
@@ -103,25 +106,25 @@ public void i_clicked_on_Create_course_link() throws Throwable {
 	driver.findElement(By.xpath("//a[contains(text(), 'Create a course')]")).click();
 }
 
-@When("^I enter the Title \"([^\"]*)\"$")
-public void i_enter_the_Title(String title) throws Throwable {
+@When("^I enter the Title$")
+public void i_enter_the_Title() throws Throwable {
     // Write code here that turns the phrase above into concrete actions
 	driver.findElement(By.xpath("//input[@type='text' and @name='title']")).clear();
-	driver.findElement(By.xpath("//input[@type='text' and @name='title']")).sendKeys(title);;
+	driver.findElement(By.xpath("//input[@type='text' and @name='title']")).sendKeys(Wrapper.getDataFromExcel(1,2));;
 }
 
-@When("^I enter the code \"([^\"]*)\"$")
-public void i_enter_the_code(String code) throws Throwable {
+@When("^I enter the code$")
+public void i_enter_the_code() throws Throwable {
     // Write code here that turns the phrase above into concrete actions
 	driver.findElement(By.xpath("//input[@type='text' and @name='visual_code']")).clear();
-	driver.findElement(By.xpath("//input[@type='text' and @name='visual_code']")).sendKeys(code);
+	driver.findElement(By.xpath("//input[@type='text' and @name='visual_code']")).sendKeys(Wrapper.getDataFromExcel(1,3));
 }
 
-@When("^I enter the Teacher list box \"([^\"]*)\"$")
-public void i_enter_the_Teacher_list_box(String teacher) throws Throwable {
+@When("^I enter the Teacher list box$")
+public void i_enter_the_Teacher_list_box() throws Throwable {
     // Write code here that turns the phrase above into concrete actions
 	//driver.findElement(By.xpath("//input[@type='search']")).clear();
-	driver.findElement(By.xpath("//input[@type='search']")).sendKeys(teacher);
+	driver.findElement(By.xpath("//input[@type='search']")).sendKeys(Wrapper.getDataFromExcel(1,4));
 
 	  Robot rob=new Robot();
     Thread.sleep(2000);
@@ -140,7 +143,7 @@ public void i_enter_the_Teacher_list_box(String teacher) throws Throwable {
 public void i_select_Language_List_box() throws Throwable {
     // Write code here that turns the phrase above into concrete actions
 	Select drpdown=new Select (driver.findElement(By.name("course_language")));
-    drpdown.selectByVisibleText("English");
+    drpdown.selectByVisibleText(Wrapper.getDataFromExcel(1,5));
 }
 
 @When("^I clicked on Create Course button$")

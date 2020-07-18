@@ -1,4 +1,4 @@
-$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("course.feature");
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("courseexcel.feature");
 formatter.feature({
   "line": 2,
   "name": "This feature is to Login the Application",
@@ -40,7 +40,7 @@ formatter.match({
   "location": "Login_Stepdefinitions.i_launch_the_application()"
 });
 formatter.result({
-  "duration": 13958312100,
+  "duration": 22228803400,
   "status": "passed"
 });
 formatter.match({
@@ -57,7 +57,7 @@ formatter.match({
   "location": "Login_Stepdefinitions.i_enter_the_username_and_password(String,String)"
 });
 formatter.result({
-  "duration": 10079694100,
+  "duration": 6782541500,
   "status": "passed"
 });
 formatter.scenario({
@@ -91,12 +91,12 @@ formatter.step({
 });
 formatter.step({
   "line": 15,
-  "name": "I enter the Category Code \"BL\"",
+  "name": "I enter the Category Code",
   "keyword": "And "
 });
 formatter.step({
   "line": 16,
-  "name": "I enter the Category Name \"Blended Learning\"",
+  "name": "I enter the Category Name",
   "keyword": "And "
 });
 formatter.step({
@@ -113,61 +113,49 @@ formatter.match({
   "location": "Login_Stepdefinitions.i_clicked_on_Adminstration_tab()"
 });
 formatter.result({
-  "duration": 3907940200,
+  "duration": 4056990900,
   "status": "passed"
 });
 formatter.match({
   "location": "Login_Stepdefinitions.i_clicked_on_course_categories_link()"
 });
 formatter.result({
-  "duration": 1237499900,
+  "duration": 1277222900,
   "status": "passed"
 });
 formatter.match({
   "location": "Login_Stepdefinitions.i_clicked_on_Add_Category_icon()"
 });
 formatter.result({
-  "duration": 4015940500,
+  "duration": 4075584100,
   "status": "passed"
 });
 formatter.match({
-  "arguments": [
-    {
-      "val": "BL",
-      "offset": 27
-    }
-  ],
-  "location": "Login_Stepdefinitions.i_enter_the_Category_Code(String)"
+  "location": "Login_Stepdefinitions.i_enter_the_Category_Code()"
 });
 formatter.result({
-  "duration": 156838800,
+  "duration": 861511000,
   "status": "passed"
 });
 formatter.match({
-  "arguments": [
-    {
-      "val": "Blended Learning",
-      "offset": 27
-    }
-  ],
-  "location": "Login_Stepdefinitions.i_enter_the_Category_Name(String)"
+  "location": "Login_Stepdefinitions.i_enter_the_Category_Name()"
 });
 formatter.result({
-  "duration": 276381900,
+  "duration": 303914400,
   "status": "passed"
 });
 formatter.match({
   "location": "Login_Stepdefinitions.i_clicked_Yes_radio_button()"
 });
 formatter.result({
-  "duration": 133437900,
+  "duration": 97510800,
   "status": "passed"
 });
 formatter.match({
   "location": "Login_Stepdefinitions.i_clicked_Add_Category_button()"
 });
 formatter.result({
-  "duration": 1280345400,
+  "duration": 1330303400,
   "status": "passed"
 });
 formatter.scenario({
@@ -196,17 +184,17 @@ formatter.step({
 });
 formatter.step({
   "line": 24,
-  "name": "I enter the Title \"testing\"",
+  "name": "I enter the Title",
   "keyword": "And "
 });
 formatter.step({
   "line": 25,
-  "name": "I enter the code \"tes\"",
+  "name": "I enter the code",
   "keyword": "And "
 });
 formatter.step({
   "line": 26,
-  "name": "I enter the Teacher list box \"manzoor\"",
+  "name": "I enter the Teacher list box",
   "keyword": "And "
 });
 formatter.step({
@@ -223,67 +211,49 @@ formatter.match({
   "location": "Login_Stepdefinitions.i_clicked_on_Adminstration_link()"
 });
 formatter.result({
-  "duration": 845234600,
+  "duration": 1236029800,
   "status": "passed"
 });
 formatter.match({
   "location": "Login_Stepdefinitions.i_clicked_on_Create_course_link()"
 });
 formatter.result({
-  "duration": 1943064900,
+  "duration": 1607709300,
   "status": "passed"
 });
 formatter.match({
-  "arguments": [
-    {
-      "val": "testing",
-      "offset": 19
-    }
-  ],
-  "location": "Login_Stepdefinitions.i_enter_the_Title(String)"
+  "location": "Login_Stepdefinitions.i_enter_the_Title()"
 });
 formatter.result({
-  "duration": 430221100,
+  "duration": 312529900,
   "status": "passed"
 });
 formatter.match({
-  "arguments": [
-    {
-      "val": "tes",
-      "offset": 18
-    }
-  ],
-  "location": "Login_Stepdefinitions.i_enter_the_code(String)"
+  "location": "Login_Stepdefinitions.i_enter_the_code()"
 });
 formatter.result({
-  "duration": 203684500,
+  "duration": 243397300,
   "status": "passed"
 });
 formatter.match({
-  "arguments": [
-    {
-      "val": "manzoor",
-      "offset": 30
-    }
-  ],
-  "location": "Login_Stepdefinitions.i_enter_the_Teacher_list_box(String)"
+  "location": "Login_Stepdefinitions.i_enter_the_Teacher_list_box()"
 });
 formatter.result({
-  "duration": 6420205900,
+  "duration": 6447842800,
   "status": "passed"
 });
 formatter.match({
   "location": "Login_Stepdefinitions.i_select_Language_List_box()"
 });
 formatter.result({
-  "duration": 92668400,
+  "duration": 114451000,
   "status": "passed"
 });
 formatter.match({
   "location": "Login_Stepdefinitions.i_clicked_on_Create_Course_button()"
 });
 formatter.result({
-  "duration": 2937236600,
+  "duration": 3130069800,
   "status": "passed"
 });
 });
